@@ -99,3 +99,10 @@ Les étapes de la création de la clé SSH (à refaire en cas de cahngement de m
 - git commit -m "nomdecommit"
 - git push avec clé ssh
      - -> ex : git push git@github.com:Matt7474/Fiches-de-cours.git
+
+## <span style="color: #26B250">Procédure de push apres maj :</span>
+
+- git add .
+- git commit -m "nomdecommit"
+- git push avec clé ssh
+  
