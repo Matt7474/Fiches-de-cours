@@ -88,3 +88,14 @@ Les étapes de la création de la clé SSH (à refaire en cas de cahngement de m
 4. pour lance de maniere sécurisé la clé
      - eval "$(ssh-agent -s)"
   
+## <span style="color: #26B250">Procédure de création d'un nouveau Reposatorie et 1er push :</span>
+
+###  <span style="color: #92B">Dans le dossier source :
+
+- git init
+- git add .
+- ssh-keygen -t ed25519 -C "adressemailgithub"
+     - -> entrée -> entrée -> entrée (pas de passphrase)
+- git commit -m "nomdecommit"
+- git push avec clé ssh
+     - -> ex : git push git@github.com:Matt7474/Fiches-de-cours.git
