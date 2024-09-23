@@ -1,0 +1,47 @@
+body {
+    font-family: sans-serif;
+    
+}
+h1 {
+    color: white;
+    background-color: red;
+    text-align: center;
+    font-size: 40px;
+}
+DIV{
+    display: flex;
+    justify-content: center;
+}
+h2 {
+    color:#f02425;
+    font-size: 30px;
+    text-align: center;
+}
+h3 {
+    text-decoration: underline; 
+    font-family: sans-serif;
+    text-align: center;
+    font-style: italic;
+    font-weight: lighter;
+}
+body{
+    background-color: #fff3db;
+}
+strong{
+    color: #f02425;
+}
+em {
+    color: #f02425;
+    font-style: normal;
+}
+a{
+    font-weight: bolder;
+    color: #4184b1
+}
+.astuce{
+    font-style: italic;
+    font-size: large;
+    background-color: #fed388;
+    color: #7d6e64;
+    text-align: center;
+}

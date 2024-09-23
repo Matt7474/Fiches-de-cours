@@ -1,0 +1,251 @@
+<!-- Syntaxe des langages de balisage -->
+
+<!-- ceci est un commentaire :
+     souvent les langages permettent de laisser des informations
+     dans du code. Des informations à destination des développeurs
+     ou d'autres personnes de l'équipe. Des informations sur le code,
+     son organisation, son but... C'est ce que l'on nomme des commentaires. 
+     
+     En HTML un commentaire commence par un chevron ouvrant (<) puis
+     un point d'exclamation (!) et deux tirets (-).
+     Il se termine par deux tirets et un chevron fermant (>).
+     Les commentaires peuvent-être sur plusieurs lignes. -->
+
+<!-- les balises du langage HTML permettent d'indiquer la structure du document :
+     - titre de niveau 1
+     - titre de niveau 2
+     - titre de niveau ...
+     - paragraphes
+     - les liens
+     - les images
+     - ... -->
+
+<!-- une balise c'est un nom (qui indique le rôle de la balise) 
+     compris entre un chevron ouvrant (<) et un chevron fermant (>) -->
+     <balise>
+
+        <!-- Dans certain cas une balise aura du contenu, comme du texte pour un paragraphe.
+             Une balise avec du contenu est composée de :
+             - la balise ouvrante <balise> 
+             - le contenu
+              - une balise fermante  </balise> : 
+                - elle reprend le nom de balise
+                - préfixé par un slash (/)  -->
+         <balise>Ici on peut mettre du contenu, du texte par exemple</balise>
+        
+         <!-- on peut aussi avoir des balises sans contenu -->
+        <balise></balise>
+        
+        <!-- on peut avoir des balises sans contenu qui se ferment toute seule -->
+        <balise>
+        <!-- avant HTML5 (la dernière version de HTML), les balises sans contenu
+             qui se ferment toute seule (auto-fermentes) s'écrivaient -->
+        <balise />
+        
+        <!-- on peut également ajouter des informations dans une balise,
+             on peut "paramétrer" certaines balises / les personnaliser.
+             Pour cela on utilise des attributs :
+               - c'est nom qui indique une personnalisation
+               - un attribut a une valeur, c'est la valeur de la personnalisation -->
+        <balise attribut="valeur" attribut2="valeur">Un contenu</balise>
+        
+        <!-- les balises peuvent aussi contenir des balises -->
+        <ancetre>
+            <enfant>du texte</enfant>
+            <autreenfant>
+                du contenu textuel
+                <petitenfant>coucou ;o)</petitenfant>
+            </autreenfant>
+        </ancetre>
+        
+        <!-- on peut tout écrire à la suite :
+             ça devient vite illisible, donc on peut aussi indenter (mettre des espaces et des sauts de ligne)
+             entre les balises, dans notre code.
+             DONC ON LE FAIT !!! -->
+        <ancetre><enfant>du texte</enfant><autreenfant>du contenu textuel<petitenfant>coucou ;o)</petitenfant></autreenfant>
+        </ancetre>
+        
+        <!-- un document HTML :
+             - c'est un ensemble de balises 
+             - qui peuvent être personnalisée avec des attributs
+             - qui peuvent contenir
+               - d'autres balises
+               - ou du texte. -->
+        
+        <!-- on fera attention à noter les balises et les attributs en minuscules !!! 
+             Le respect de la casse (différence majuscules / minuscules) est important
+             dans les langages de balisage. -->
+
+
+
+
+
+
+             
+             <!DOCTYPE html>
+             <html lang="fr">
+             <head>
+                 <meta charset="UTF-8">
+                 <title>HTML et CSS</title>
+             
+                 <!-- on doit indiquer que l'on utilise le fichier
+                      styles.css : c'est la balise link.
+                      rel="stylesheet" indique que l'on va chercher
+                      un fichier de styles.
+                      href="./styles.css" indique où trouver le fichier.
+                      On utilise de préférence les chemins relatifs.
+                      ATTENTION : souvent les fichiers HTML et CSS ne
+                      sont pas directement dans le même répertoire. -->
+                 <link rel="stylesheet" href="./styles.css">
+             </head>
+             <body>
+             
+                 <!-- la balise header indique que l'on est dans l'entête
+                  du contenu du document : c'est une indication complémentaire
+                  pour les robots des moteurs de recherche et pour les outils d'accessibilité -->
+                 <header>
+                     <!-- bonne pratique pour l'accessibilité :
+                     un seul titre de niveau 1 dans le document HTML -->
+                     <h1>HTML &amp; CSS</h1>
+                 </header>
+             
+                 <!-- main indique que l'on est dans le contenu principal de la page -->
+                 <main>
+                     <h2>HTML : Le fond</h2>
+                     <p>HTML signifie "HyperText Markup Language" qu'on peut traduire par "langage de balises pour l'hypertexte". Il est utilisé afin de créer et de représenter le contenu d'une page web et sa structure. D'autres technologies sont utilisées avec HTML pour décrire la présentation d'une page (CSS) et/ou ses fonctionnalités interactives (JavaScript).</p>
+             
+                     <h3>Les textes</h3>
+                     <p>Avec les balises h1-h6 il est possible de définir des titres en respectant une logique de profondeur</p>
+             
+                     <!-- ul permet de déclarer une liste
+                     chaque élément de la liste est dans une balise li-->
+                     <ul>
+                         <li><code>h1</code> : 1. : Titre principal</li>
+                         <li><code>h2</code> : 1.1 : sous-titre</li>
+                         <li><code>h3</code> : 1.1.1 ...</li>
+                         <li><code>h3</code> : 1.1.2 ...</li>
+                         <li><code>h3</code> : 1.1.3 ...</li>
+                         <li><code>h2</code> : 1.2 : sous-titre</li>
+                         <li><code>h2</code> : 1.3 : sous-titre</li>
+                     </ul>
+             
+                     <p>Pour représenter un paragraphe de texte courant la balise p est parfaite</p>
+             
+                     <p><strong>strong</strong> et <em>em</em> sont des balises permettant de définir des mots ou expressions signifiants dans un texte courant</p>
+             
+                     <h2>CSS : La forme</h2>
+                     <p>CSS signifie "Cascading Style Sheets", c'est un langage de feuille de style utilisé pour décrire la présentation d'un document écrit en HTML ou en XML. CSS décrit la façon dont les éléments doivent être affichés à l'écran, sur du papier, en vocalisation, ou sur d'autres supports.</p>
+             
+                     <h3>Anatomie d'une règle CSS</h3>
+                     <h4>Sélecteur</h4>
+                     <p>C'est le nom de l'élément HTML situé au début de l'ensemble de règles. Il permet de sélectionner les éléments sur lesquels appliquer le style souhaité (en l'occurence, les éléments p). Pour mettre en forme un élément différent, il suffit de changer le sélecteur.</p>
+             
+                     <h4>Déclaration</h4>
+                     <p>C'est une règle simple comme color: red; qui détermine les propriétés de l'élément que l'on veut mettre en forme.</p>
+             
+                     <h4>Propriétés</h4>
+                     <p>Les différentes façons dont on peut mettre en forme un élément HTML (dans ce cas, color est une propriété des éléments p). En CSS, vous choisissez les différentes propriétés que vous voulez utiliser dans une règle CSS.</p>
+             
+                     <h4>Valeur de la propriété</h4>
+                     <p>À droite de la propriété, après les deux points, on a la valeur de la propriété. Celle-ci permet de choisir une mise en forme parmi d'autres pour une propriété donnée (par exemple, il y a d'autres couleurs que red pour la propriété color).</p>
+                 </main>
+             
+                 <!-- le footer indique un pied de page du document -->
+                 <footer>
+                     <p>De plus amples informations sont disponibles sur les fiches récap ou sur le MDN</p>
+             
+                     <p>Ressources : <a href="https://htmlreference.io/">htmlreference</a> - <a href="https://cssreference.io/">cssreference</a> - <a href="https://developer.mozilla.org/">MDN</a></p>
+                 </footer>
+                 
+             </body>
+             </html>
+
+
+
+
+
+
+
+             css
+
+
+
+
+             /* on est dans un fichier CSS, qui ne contient QUE
+   du code CSS !
+   Ce fichier peut-être partagé par plusieurs fichiers HTML */
+
+/* commentaire en CSS */
+
+/* pour tout le document on veut utiliser des polices
+   sans empâtement.
+   Pour appliquer cette règle à tous les éléments,
+   on peut l'appliquer à l'élément html. */
+html {
+    /* certaines propriétés se répercutent sur les éléments
+    enfants. C'est l'héritage des propriétés. */
+    font-family: sans-serif;
+}
+
+body {
+    background-color: burlywood;
+}
+
+/* on doit cibler un élément pour lui
+appliquer des règles (= propriété + valeur).
+C'est ce que l'on appelle un sélecteur :
+on sélectionne un ou plusieurs éléments
+de la page web. */
+h1 {
+    /* toutes les règles pour le sélecteur
+        sont entre accolades */
+
+    /* une règle de mise en forme est composée
+        d'une propriété, ici on modifie la couleur
+        du texte, et d'une valeur, on met la couleur
+        du texte en rouge.
+        On termine une règle par un point-virgule */
+    color: red;
+    background-color: beige;
+    /* taille de police à 40 pixels (unité : px)
+       le pixel est une unité fixe qui est la même sur
+       tous les écrans. C'est une unité absolue. */
+    font-size: 40px;
+
+    /* on peut choisir l'alignement du texte */
+    text-align: center;
+}
+
+h2 {
+    color: green;
+}
+
+/* on veut une police avec empattement pour les titres 3 */
+h3 {
+    font-family: serif;
+}
+
+/* on peut modifier la forme du strong */
+strong {
+    font-weight: normal;
+    /* couleur de fond, yellow est la couleur jaune */
+    background-color: yellow;
+}
+
+em {
+    font-style: normal;
+    text-decoration: underline;
+}
+
+footer {
+    font-size: 12px;
+    text-align: center;
+}
+
+/* on peut ne sélectionner que les éléments d'un élément.
+   Ici on sélectionne uniquement les liens (a) qui sont
+   dans le pied de page (footer).
+   On utilise la syntaxe élément-parent élément-enfant */
+footer a {
+    color: cyan;
+}
